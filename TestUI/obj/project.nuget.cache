@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "SzV4gdN2KHiziwJLht5USoCYel8NcD011eFeKspzDNzNNvqNZd8/vMD28803o8Tn07jRoGDKSX2VNiZkk789LA==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\CrossStitch\\TestUI\\TestUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nigel\\.nuget\\packages\\generalconstruction\\1.0.0\\generalconstruction.1.0.0.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\linqq\\1.0.5\\linqq.1.0.5.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\wpftools\\1.0.2\\wpftools.1.0.2.nupkg.sha512",
+    "C:\\Users\\nigel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Drawing.Common' 5.0.2 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
