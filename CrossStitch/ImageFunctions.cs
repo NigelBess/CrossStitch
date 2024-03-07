@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.ExceptionServices;
 
 namespace CrossStitch
 {
@@ -27,16 +25,22 @@ namespace CrossStitch
                 for (var j = 0; j < columns; j++)
                 {
                     var color = bitmap.GetPixel(j, i);
-                    list.Add(color.ToFloatArray());
+                    var hsv = ColorHelper.ColorToHSV(color);
+                    if(hsv.Any(x=>float.IsNaN(x)))
+                    { 
+                    }
+                    list.Add(hsv);
                 }
             }
 
             return list;
         }
 
-        public static float[] ToFloatArray(this Color color) => new float[] {((float)color.R)/255f, ((float)color.G) / 255f, ((float)color.B) / 255f};
-        public static Color ToColor(this float[] array) => Color.FromArgb((byte)255,(byte)(array[0]*255), (byte)(array[1]*255), (byte)(array[2]*255));
-
+        public static Bitmap Resize(Bitmap original, float scale)
+        {
+            var height = original.Height;
+            return original.Resize((int)(scale * height));
+        }
         public static Bitmap Recolor(Bitmap original, List<float[]> newColors)
         {
             var rows = original.Height;
@@ -46,9 +50,9 @@ namespace CrossStitch
             {
                 for (var j = 0; j < columns; j++)
                 {
-                    var color = original.GetPixel(j, i).ToFloatArray();
-                    var bestMatch = ColorPicker.GetBestMatch(color, newColors);
-                    var typedColor = bestMatch.ToColor();
+                    var color = ColorHelper.ColorToHSV(original.GetPixel(j, i));
+                    var bestMatch = KMeans.AssignCentroid(newColors,color);
+                    var typedColor = ColorHelper.HSVToColor(bestMatch);
                     newImage.SetPixel(j,i, typedColor);
                 }
             }

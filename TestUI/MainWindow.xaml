@@ -46,15 +46,19 @@
                                 <TextBlock Text="Colors"/>
                                 <TextBox Text="{Binding ColorCount}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Iterations"/>
-                                <TextBox Text="{Binding Iterations}"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Gain"/>
-                                <TextBox Text="{Binding Gain}"/>
-                            </StackPanel>
-                            <Button Content="Calculate" Command="{Binding Calculate}"></Button>
+                     <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Iterations"/>
+                        <TextBox Text="{Binding Iterations}"/>
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Scale"/>
+                        <TextBox Text="{Binding UserSettings.Scale}"/>
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <Button Content="Calculate" Command="{Binding Calculate}" Width="100" Margin="2"/>
+                        <Button Content="Cancel" Command="{Binding CancelCommand}" Width="100" Margin="2"/>
+                     </StackPanel>
+                     
                         </StackPanel>
                         
                     </Border>
@@ -68,9 +72,11 @@
         <Grid Grid.Row="3">
             <DockPanel>
                     <TextBlock Text="{Binding Message}" Height="15" Margin="50,0" DockPanel.Dock="Top"></TextBlock>
-                <UniformGrid Margin="10" Rows ="1">
-                    <Image Source="{Binding StockImage}" Margin="5"/>
-                    <Image Source="{Binding AlteredImage}" Margin="5" />
+                <UniformGrid Margin="10" Rows ="2">
+                     <Image Source="{Binding StockImage}" Margin="5"/>
+                     <Image Source="{Binding ScaledImage}" Margin="5"/>
+                     <Image Source="{Binding KMeansImage}" Margin="5"/>
+                     <Image Source="{Binding AlteredImage}" Margin="5" />
                 </UniformGrid>
                 </DockPanel>
             

@@ -26,12 +26,12 @@ namespace TestUI
             _mainWindowViewModel.LoadCommand = new Command(Load);
             _mainWindowViewModel.CancelCommand = new Command(Cancel,()=>IsCalculating);
             _mainWindowViewModel.Calculate = new Command(RecalculateAll, () => !IsCalculating);
-            _mainWindowViewModel.GetWidthFromHeight = _colorPickerData.GetWidthFromHeight;
 
         }
 
         private void Cancel()
         {
+            LogMessage("Cancelled");
             _cancellationTokenSource?.Cancel();
         }
 
@@ -44,15 +44,18 @@ namespace TestUI
             SaveSettings();
             Task.Run(() =>
             {
-                var scaledImage = _colorPickerData.ScaleFullResImage(UserSettings.Default.Height);
+                var fullRes = _colorPickerData.FullResImage;
+                var scaledImage = ImageFunctions.Resize(fullRes,UserSettings.Default.Scale);
+                _mainWindowViewModel.ScaledImage = scaledImage.ToBitmapImage();
                 var pixels = scaledImage.GetPixels();
-                var newColors = ColorPicker.PickColors(pixels, _mainWindowViewModel.ColorCount,
-                    _mainWindowViewModel.Iterations, _mainWindowViewModel.Gain);
-                var newImage = ImageFunctions.Recolor(scaledImage, newColors);
-                _mainWindowViewModel.AlteredImage = newImage.ToBitmapImage();
+                var newColors = KMeans.FindCentroids(pixels, _mainWindowViewModel.ColorCount, _mainWindowViewModel.Iterations);
+                var newScaledImage = ImageFunctions.Recolor(scaledImage, newColors);
+                var newImage = ImageFunctions.Recolor(fullRes,newColors);
+                _mainWindowViewModel.AlteredImage = newScaledImage.ToBitmapImage();
+                _mainWindowViewModel.KMeansImage = newImage.ToBitmapImage();
 
             }, _cancellationTokenSource.Token).ContinueWith(t =>
-            { 
+            {
                 _cancellationTokenSource = null;
                 _mainWindowViewModel.CanCancel = false;
                 LogMessage("Done");
@@ -85,7 +88,6 @@ namespace TestUI
         {
             var imagePixels = ImageReader.LoadImage(file);
             _colorPickerData.FullResImage = imagePixels;
-            _colorPickerData.ScaleFullResImage(UserSettings.Default.Height);
             _mainWindowViewModel.StockImage = imagePixels.ToBitmapImage();
             UserSettings.Default.ImagePath = file;
             SaveSettings();

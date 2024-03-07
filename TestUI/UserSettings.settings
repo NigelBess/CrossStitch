@@ -8,8 +8,8 @@
     <Setting Name="NumberOfColors" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">30</Value>
     </Setting>
-    <Setting Name="Height" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">128</Value>
+    <Setting Name="Scale" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.25</Value>
     </Setting>
     <Setting Name="ValueAssigner" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -24,5 +24,7 @@ C:\Dev\CrossStitch\CrossStitch\bin\Debug\netcoreapp3.1\System.Deployment.xml
 C:\Dev\CrossStitch\CrossStitch\bin\Debug\netcoreapp3.1\Accessibility.xml
 C:\Dev\CrossStitch\CrossStitch\bin\Debug\netcoreapp3.1\System.Windows.Forms.xml
 C:\Dev\CrossStitch\CrossStitch\bin\Debug\netcoreapp3.1\System.Runtime.Serialization.Formatters.Soap.xml
-C:\Dev\CrossStitch\CrossStitch\obj\Debug\netcoreapp3.1\CrossStitch.csproj.CopyComplete
 C:\Dev\CrossStitch\CrossStitch\obj\Debug\netcoreapp3.1\CrossStitch.csproj.AssemblyReference.cache
+C:\Dev\CrossStitch\CrossStitch\obj\Debug\netcoreapp3.1\CrossStitch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\CrossStitch\CrossStitch\obj\Debug\netcoreapp3.1\CrossStitch.sourcelink.json
+C:\Dev\CrossStitch\CrossStitch\obj\Debug\netcoreapp3.1\CrossSti.B7388B1A.Up2Date

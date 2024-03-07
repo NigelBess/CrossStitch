@@ -5,16 +5,17 @@ using System.Linq;
 
 namespace CrossStitch
 {
-    internal static class KMeans
+    public static class KMeans
     {
         private static Random random = new Random();
         public static List<float[]> FindCentroids(List<float[]> dataPoints, int clusterCount, int iterations)
         {
             var minCost = float.MaxValue;
             List<float[]> bestCentroids = null;
+            var uniqueDataPoints = UniqueDataPoints(dataPoints);
             for (int i = 0; i < iterations; i++)
             {
-                var centroids = ExecuteSingleKMeans(dataPoints, clusterCount);
+                var centroids = ExecuteSingleKMeans(uniqueDataPoints,dataPoints, clusterCount);
                 var assignments = AssignCentroids(centroids,dataPoints);
                 var cost = ComputeCost(assignments);
                 if (cost < minCost)
@@ -26,11 +27,8 @@ namespace CrossStitch
             return bestCentroids;
         }
 
-        private static List<float[]> ExecuteSingleKMeans(List<float[]> dataPoints, int clusterCount)
+        private static List<float[]> ExecuteSingleKMeans(List<float[]> uniqueDataPoints,List<float[]> dataPoints, int clusterCount)
         {
-            //initialize clusters to random unique data points
-            var uniqueDataPoints = UniqueDataPoints(dataPoints);
-
             var centroids = SampleWithoutReplacement(uniqueDataPoints, clusterCount);
             var assignemnts = AssignCentroids(centroids, dataPoints);
             var lastCost = float.MaxValue;
@@ -86,9 +84,13 @@ namespace CrossStitch
 
         private static List<T> SampleWithoutReplacement<T>(IList<T> list, int sampleSize)
         {
+            var n = list.Count;
+            if (sampleSize > n)
+            {
+                throw new Exception($"Can not sample {sampleSize} points from a list with {n} elements. (sample size must be greater than or equal to list length)");
+            }
             // Create a new list to avoid modifying the original list
             var tempList = list.ToList();
-            var n = tempList.Count;
 
             // Perform a partial Fisher-Yates shuffle
             for (int i = 0; i < sampleSize; i++)
@@ -106,19 +108,22 @@ namespace CrossStitch
             return tempList.GetRange(0, sampleSize);
         }
 
-        private static List<float[]> UniqueDataPoints(List<float[]> dataPoints, float epsilonPercent = 0.001f)
+        private static List<float[]> UniqueDataPoints(List<float[]> dataPoints, float epsilonRatio = 0.01f)
         {
             var range = FindRange(dataPoints);
-            var epsilon = range.Select(r => r.RangeWidth * epsilonPercent).ToList();
+            var epsilon = range.Select(r => r.RangeWidth * epsilonRatio).ToList();
 
 
             var uniques = new List<float[]>(dataPoints.Count);
 
-            foreach (var dataPoint in dataPoints.Where(d => !IsInUniques(d))) uniques.Add(dataPoint);
+            foreach (var dataPoint in dataPoints)
+            {
+                if (!IsInUniques(dataPoint)) uniques.Add(dataPoint);
+            }
 
             return uniques;
 
-            bool IsInUniques(float[] dataPoint) => !uniques.Any(u => ArePointsEqual(u, dataPoint, epsilon));
+            bool IsInUniques(float[] dataPoint) => uniques.Any(u => ArePointsEqual(u, dataPoint, epsilon));
         }
 
         private static bool ArePointsEqual(float[] d1, float[] d2, IList<float> epsilon)
@@ -126,9 +131,13 @@ namespace CrossStitch
             var l = d1.Length;
             for (int i = 0; i < l; i++)
             {
-                if (Math.Abs(d1[i] - d2[i]) > epsilon[i]) return true;
+                var p1 = d1[i];
+                var p2 = d2[i];
+                var eps = epsilon[i];
+                var diff = Math.Abs(p2-p1);
+                if (diff > eps) return false;
             }
-            return false;
+            return true;
         }
 
         private static Range[] FindRange(List<float[]> dataPoints)
@@ -188,12 +197,16 @@ namespace CrossStitch
 
         public static float[] AssignCentroid(List<float[]> centroids, float[] dataPoint)
         {
+            if (centroids.Count<=0)
+            {
+                throw new Exception("Can not assign centroid from empty list");
+            }
             var minSquareDistance = float.MaxValue;
             float[] bestCentroid = null;
             foreach (var c in centroids)
             {
                 var squareDistance = ComputeSquareDistance(c, dataPoint);
-                if (squareDistance > minSquareDistance)
+                if (squareDistance < minSquareDistance)
                 {
                     minSquareDistance = squareDistance;
                     bestCentroid = c;

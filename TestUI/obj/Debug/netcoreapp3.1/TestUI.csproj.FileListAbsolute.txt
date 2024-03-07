@@ -19,7 +19,6 @@ C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.g.resources
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.AssemblyInfoInputs.cache
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.AssemblyInfo.cs
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.csproj.CoreCompileInputs.cache
-C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.csproj.CopyComplete
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.dll
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.pdb
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.genruntimeconfig.cache
@@ -28,3 +27,7 @@ C:\Dev\CrossStitch\TestUI\bin\Debug\netcoreapp3.1\CrossStitch.dll
 C:\Dev\CrossStitch\TestUI\bin\Debug\netcoreapp3.1\CrossStitch.pdb
 C:\Dev\CrossStitch\TestUI\bin\Debug\netcoreapp3.1\GeneralConstruction.dll
 C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.csproj.AssemblyReference.cache
+C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.sourcelink.json
+C:\Dev\CrossStitch\TestUI\obj\Debug\netcoreapp3.1\TestUI.csproj.Up2Date
+C:\Dev\CrossStitch\TestUI\bin\Debug\netcoreapp3.1\TestUI.dll.config
