@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrossStitchTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a60e79d813e328073ac691580f79b9dd6cfc350")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97ed10c7c007e708a3ce023040bb8f60bdced7f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrossStitchTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrossStitchTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

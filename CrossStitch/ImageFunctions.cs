@@ -15,7 +15,7 @@ namespace CrossStitch
             return new Bitmap(original, newWidth, height);
         }
 
-        public static List<float[]> GetPixels(this Bitmap bitmap)
+        public static List<float[]> GetPixels(this Bitmap bitmap, IColorConverter converter)
         {
             var rows = bitmap.Height;
             var columns = bitmap.Width;
@@ -25,11 +25,8 @@ namespace CrossStitch
                 for (var j = 0; j < columns; j++)
                 {
                     var color = bitmap.GetPixel(j, i);
-                    var hsv = ColorHelper.ColorToHSV(color);
-                    if(hsv.Any(x=>float.IsNaN(x)))
-                    { 
-                    }
-                    list.Add(hsv);
+                    var rgb  = converter.ToRaw(color);
+                    list.Add(rgb);
                 }
             }
 
@@ -41,7 +38,7 @@ namespace CrossStitch
             var height = original.Height;
             return original.Resize((int)(scale * height));
         }
-        public static Bitmap Recolor(Bitmap original, List<float[]> newColors)
+        public static Bitmap Recolor(Bitmap original, List<float[]> newColors, IColorConverter converter)
         {
             var rows = original.Height;
             var columns = original.Width;
@@ -50,9 +47,9 @@ namespace CrossStitch
             {
                 for (var j = 0; j < columns; j++)
                 {
-                    var color = ColorHelper.ColorToHSV(original.GetPixel(j, i));
+                    var color = converter.ToRaw(original.GetPixel(j, i));
                     var bestMatch = KMeans.AssignCentroid(newColors,color);
-                    var typedColor = ColorHelper.HSVToColor(bestMatch);
+                    var typedColor = converter.FromRaw(bestMatch);
                     newImage.SetPixel(j,i, typedColor);
                 }
             }

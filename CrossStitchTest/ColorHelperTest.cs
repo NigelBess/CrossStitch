@@ -9,17 +9,30 @@ namespace CrossStitchTest
     public class ColorHelperTest
     {
         [TestMethod]
-        public void TestConversion()
+        public void TestRGB()
         {
             var color = Color.FromArgb(255,61,235,52);
-            var hsv = ColorHelper.ColorToHSV(color);
-            var expectedHSV = new float[]{117f, .779f, .922f };
-            foreach(var (actual,expected) in hsv.Zip(expectedHSV))
+            var rgb = new[] { .239f, .921f, .203f};
+            TestConverter(new RGBConverter(),color,rgb);
+        }
+
+        [TestMethod]
+        public void TestHSV()
+        {
+            var color = Color.FromArgb(255, 61, 235, 52);
+            var hsv = new []{.325f,.779f,.922f };
+            TestConverter(new HSVConverter(),color,hsv);
+        }
+
+        private void TestConverter(IColorConverter converter, Color color, float[] raw)
+        {
+            var hsv = converter.ToRaw(color);
+            foreach (var (actual, expected) in hsv.Zip(raw))
             {
-                Assert.AreEqual(actual, expected,.1f);
+                Assert.AreEqual(expected, actual, .1f);
             }
 
-            var newColor = ColorHelper.HSVToColor(hsv);
+            var newColor = converter.FromRaw(hsv);
             Assert.AreEqual(color, newColor);
         }
     }

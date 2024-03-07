@@ -54,6 +54,9 @@
                         <TextBlock Text="Scale"/>
                         <TextBox Text="{Binding Settings.Scale}"/>
                      </StackPanel>
+                     <ComboBox Width="50" HorizontalAlignment="Left" ItemsSource="{Binding Converters}" SelectedItem="{Binding SelectedConverter}">
+                        
+                     </ComboBox>
                      <StackPanel Orientation="Horizontal">
                         <Button Content="Calculate" Command="{Binding Calculate}" Width="100" Margin="2"/>
                         <Button Content="Cancel" Command="{Binding CancelCommand}" Width="100" Margin="2"/>

@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using CrossStitch;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
@@ -10,6 +12,8 @@ namespace TestUI
 {
     class MainWindowViewModel:Notifier
     {
+
+
         public UserSettings Settings { get; set; }
 
         public ICommand LoadCommand { get; set; }
@@ -19,6 +23,14 @@ namespace TestUI
         public ICommand Calculate { get; set; }
 
         public IList<ColorViewModel> ChosenColors { get; } = new ObservableCollection<ColorViewModel>();
+        public IList<string> Converters { get; }
+        public string SelectedConverter { get; set; }
+
+        public MainWindowViewModel(IEnumerable<string> converterNames)
+        {
+            SelectedConverter = converterNames.FirstOrDefault();
+            Converters = converterNames.ToList();
+        }
 
         public void SetColors(ICollection<Color> colors)
         {

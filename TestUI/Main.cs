@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -16,11 +17,16 @@ namespace TestUI
         private readonly MainWindowViewModel _mainWindowViewModel;
         private readonly  Factory _factory = new Factory();
         private readonly ColorPickerModel _colorPickerData = new ColorPickerModel();
+        private readonly IReadOnlyDictionary<string,IColorConverter> _converters = new Dictionary<string,IColorConverter>()
+        {
+            { "RGB", new RGBConverter() },
+            { "HSV", new HSVConverter() }
+        };
         private CancellationTokenSource _cancellationTokenSource;
         private bool IsCalculating => _cancellationTokenSource != null && !_cancellationTokenSource.IsCancellationRequested;
         public Main()
         {
-            _mainWindowViewModel = new MainWindowViewModel()
+            _mainWindowViewModel = new MainWindowViewModel(_converters.Keys)
             {
                 Settings = UserSettings.Default,
             };
@@ -48,15 +54,15 @@ namespace TestUI
                 var fullRes = _colorPickerData.FullResImage;
                 var scaledImage = ImageFunctions.Resize(fullRes,UserSettings.Default.Scale);
                 _mainWindowViewModel.ScaledImage = scaledImage.ToBitmapImage();
-                var pixels = scaledImage.GetPixels();
+                var converter = _converters[_mainWindowViewModel.SelectedConverter];
+                var pixels = scaledImage.GetPixels(converter);
                 var centroids = KMeans.FindCentroids(pixels, UserSettings.Default.ColorCount, UserSettings.Default.Iterations);
-                var newScaledImage = ImageFunctions.Recolor(scaledImage, centroids);
-                var newImage = ImageFunctions.Recolor(fullRes, centroids);
-                var colors = centroids.Select(ColorHelper.HSVToColor).ToList();
+                var newScaledImage = ImageFunctions.Recolor(scaledImage, centroids,converter);
+                var newImage = ImageFunctions.Recolor(fullRes, centroids,converter);
+                var colors = centroids.Select(converter.FromRaw).ToList();
                 _mainWindowViewModel.SetColors(colors);
                 _mainWindowViewModel.AlteredImage = newScaledImage.ToBitmapImage();
                 _mainWindowViewModel.KMeansImage = newImage.ToBitmapImage();
-                
 
             }, _cancellationTokenSource.Token).ContinueWith(t =>
             {
