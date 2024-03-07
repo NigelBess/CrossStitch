@@ -38,12 +38,12 @@ namespace TestUI {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]
-        public int NumberOfColors {
+        public int ColorCount {
             get {
-                return ((int)(this["NumberOfColors"]));
+                return ((int)(this["ColorCount"]));
             }
             set {
-                this["NumberOfColors"] = value;
+                this["ColorCount"] = value;
             }
         }
         
@@ -104,6 +104,18 @@ namespace TestUI {
             }
             set {
                 this["FinalNumberOfColors"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int Iterations {
+            get {
+                return ((int)(this["Iterations"]));
+            }
+            set {
+                this["Iterations"] = value;
             }
         }
     }

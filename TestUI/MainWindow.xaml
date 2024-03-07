@@ -44,15 +44,15 @@
                         <StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Colors"/>
-                                <TextBox Text="{Binding ColorCount}"/>
+                                <TextBox Text="{Binding Settings.ColorCount}"/>
                             </StackPanel>
                      <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Iterations"/>
-                        <TextBox Text="{Binding Iterations}"/>
+                        <TextBox Text="{Binding Settings.Iterations}"/>
                      </StackPanel>
                      <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Scale"/>
-                        <TextBox Text="{Binding UserSettings.Scale}"/>
+                        <TextBox Text="{Binding Settings.Scale}"/>
                      </StackPanel>
                      <StackPanel Orientation="Horizontal">
                         <Button Content="Calculate" Command="{Binding Calculate}" Width="100" Margin="2"/>
@@ -72,12 +72,38 @@
         <Grid Grid.Row="3">
             <DockPanel>
                     <TextBlock Text="{Binding Message}" Height="15" Margin="50,0" DockPanel.Dock="Top"></TextBlock>
-                <UniformGrid Margin="10" Rows ="2">
+                <Grid Margin="10">
+                  <Grid.RowDefinitions>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="*"/>
+                  </Grid.RowDefinitions>
+                  <UniformGrid Rows="1" Grid.Row="0">
                      <Image Source="{Binding StockImage}" Margin="5"/>
-                     <Image Source="{Binding ScaledImage}" Margin="5"/>
+                     <Image Source="{Binding ScaledImage}" Margin="5" />
+                  </UniformGrid>
+                  <UniformGrid Rows="1" Grid.Row="1">
+                     <ItemsControl ItemsSource="{Binding ChosenColors}">
+                        <ItemsControl.ItemsPanel>
+                           <ItemsPanelTemplate>
+                              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                           </ItemsPanelTemplate>
+                           
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                           <DataTemplate DataType="local:ColorViewModel">
+                              <Image Source="{Binding Sample}" Height="10" Width="10" Margin="5"/>
+                           </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                     </ItemsControl>
+                  </UniformGrid>
+                  <UniformGrid Rows="1" Grid.Row="2">
                      <Image Source="{Binding KMeansImage}" Margin="5"/>
                      <Image Source="{Binding AlteredImage}" Margin="5" />
-                </UniformGrid>
+                  </UniformGrid>
+
+                  
+                </Grid>
                 </DockPanel>
             
         </Grid>

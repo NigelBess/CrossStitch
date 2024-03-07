@@ -5,7 +5,7 @@
     <Setting Name="ImagePath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="NumberOfColors" Type="System.Int32" Scope="User">
+    <Setting Name="ColorCount" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">30</Value>
     </Setting>
     <Setting Name="Scale" Type="System.Single" Scope="User">
@@ -22,6 +22,9 @@
     </Setting>
     <Setting Name="FinalNumberOfColors" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="Iterations" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
     </Setting>
   </Settings>
 </SettingsFile>

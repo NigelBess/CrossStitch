@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Dev\\CrossStitch\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\colorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\colorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\imagefunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\imagefunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\imagereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\imagereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\kmeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\kmeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\colorpickermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\colorpickermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,8 +23,16 @@
       "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\usersettings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\usersettings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\usersettings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\colorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\colorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\colorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\colorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\kmeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\kmeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{810E90C6-14F5-4D41-ADD9-EC1F9C66843D}|CrossStitchTest\\CrossStitchTest.csproj|c:\\dev\\crossstitch\\crossstitchtest\\colorhelpertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,6 +41,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{810E90C6-14F5-4D41-ADD9-EC1F9C66843D}|CrossStitchTest\\CrossStitchTest.csproj|c:\\dev\\crossstitch\\crossstitchtest\\colorpickertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{810E90C6-14F5-4D41-ADD9-EC1F9C66843D}|CrossStitchTest\\CrossStitchTest.csproj|solutionrelative:crossstitchtest\\colorpickertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\imagereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|solutionrelative:crossstitch\\imagereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\colorpickermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\colorpickermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|c:\\dev\\crossstitch\\testui\\usersettings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D755BB22-9507-4335-9393-5A12DD26226C}|TestUI\\TestUI.csproj|solutionrelative:testui\\usersettings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08B47E25-9FB7-46DF-A782-6A09D9F0DDF0}|CrossStitch\\CrossStitch.csproj|c:\\dev\\crossstitch\\crossstitch\\crossstitch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -62,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "ColorPickerTest.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitchTest\\ColorPickerTest.cs",
               "RelativeDocumentMoniker": "CrossStitchTest\\ColorPickerTest.cs",
@@ -84,7 +88,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
+              "Title": "ColorViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\ColorViewModel.cs",
+              "RelativeDocumentMoniker": "TestUI\\ColorViewModel.cs",
+              "ToolTip": "C:\\Dev\\CrossStitch\\TestUI\\ColorViewModel.cs",
+              "RelativeToolTip": "TestUI\\ColorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T05:38:28.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UserSettings.Designer.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\UserSettings.Designer.cs",
               "RelativeDocumentMoniker": "TestUI\\UserSettings.Designer.cs",
@@ -97,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "UserSettings.settings",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\UserSettings.settings",
               "RelativeDocumentMoniker": "TestUI\\UserSettings.settings",
@@ -109,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TestUI\\MainWindow.xaml",
@@ -121,33 +138,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "TestUI\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Dev\\CrossStitch\\TestUI\\MainWindowViewModel.cs",
               "RelativeToolTip": "TestUI\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAkwAoAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T05:13:45.885Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\Main.cs",
               "RelativeDocumentMoniker": "TestUI\\Main.cs",
               "ToolTip": "C:\\Dev\\CrossStitch\\TestUI\\Main.cs",
               "RelativeToolTip": "TestUI\\Main.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAnwFkAAAA4AAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAqwCgAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T01:57:13.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "ColorHelperTest.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitchTest\\ColorHelperTest.cs",
               "RelativeDocumentMoniker": "CrossStitchTest\\ColorHelperTest.cs",
@@ -160,33 +177,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ColorHelper.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitch\\ColorHelper.cs",
               "RelativeDocumentMoniker": "CrossStitch\\ColorHelper.cs",
               "ToolTip": "C:\\Dev\\CrossStitch\\CrossStitch\\ColorHelper.cs",
               "RelativeToolTip": "CrossStitch\\ColorHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T01:42:12.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ImageFunctions.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitch\\ImageFunctions.cs",
               "RelativeDocumentMoniker": "CrossStitch\\ImageFunctions.cs",
               "ToolTip": "C:\\Dev\\CrossStitch\\CrossStitch\\ImageFunctions.cs",
               "RelativeToolTip": "CrossStitch\\ImageFunctions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAxAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowDQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T01:23:46.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ImageReader.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitch\\ImageReader.cs",
               "RelativeDocumentMoniker": "CrossStitch\\ImageReader.cs",
@@ -199,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CrossStitch",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitch\\CrossStitch.csproj",
               "RelativeDocumentMoniker": "CrossStitch\\CrossStitch.csproj",
@@ -212,20 +229,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "KMeans.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\CrossStitch\\KMeans.cs",
               "RelativeDocumentMoniker": "CrossStitch\\KMeans.cs",
               "ToolTip": "C:\\Dev\\CrossStitch\\CrossStitch\\KMeans.cs",
               "RelativeToolTip": "CrossStitch\\KMeans.cs",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAAgwLoAAAANAAAA",
+              "ViewState": "AQIAANcAAAAAAAAAAAAIwLoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T17:28:28.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ColorPickerModel.cs",
               "DocumentMoniker": "C:\\Dev\\CrossStitch\\TestUI\\ColorPickerModel.cs",
               "RelativeDocumentMoniker": "TestUI\\ColorPickerModel.cs",

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -48,11 +49,14 @@ namespace TestUI
                 var scaledImage = ImageFunctions.Resize(fullRes,UserSettings.Default.Scale);
                 _mainWindowViewModel.ScaledImage = scaledImage.ToBitmapImage();
                 var pixels = scaledImage.GetPixels();
-                var newColors = KMeans.FindCentroids(pixels, _mainWindowViewModel.ColorCount, _mainWindowViewModel.Iterations);
-                var newScaledImage = ImageFunctions.Recolor(scaledImage, newColors);
-                var newImage = ImageFunctions.Recolor(fullRes,newColors);
+                var centroids = KMeans.FindCentroids(pixels, UserSettings.Default.ColorCount, UserSettings.Default.Iterations);
+                var newScaledImage = ImageFunctions.Recolor(scaledImage, centroids);
+                var newImage = ImageFunctions.Recolor(fullRes, centroids);
+                var colors = centroids.Select(ColorHelper.HSVToColor).ToList();
+                _mainWindowViewModel.SetColors(colors);
                 _mainWindowViewModel.AlteredImage = newScaledImage.ToBitmapImage();
                 _mainWindowViewModel.KMeansImage = newImage.ToBitmapImage();
+                
 
             }, _cancellationTokenSource.Token).ContinueWith(t =>
             {

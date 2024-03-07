@@ -1,4 +1,8 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Drawing;
+using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using WpfTools;
 
@@ -6,8 +10,6 @@ namespace TestUI
 {
     class MainWindowViewModel:Notifier
     {
-        public int ColorCount { get; set; } = 8;
-        public int Iterations { get; set; } = 30;
         public UserSettings Settings { get; set; }
 
         public ICommand LoadCommand { get; set; }
@@ -15,6 +17,19 @@ namespace TestUI
         public ICommand CancelCommand { get; set; }
 
         public ICommand Calculate { get; set; }
+
+        public IList<ColorViewModel> ChosenColors { get; } = new ObservableCollection<ColorViewModel>();
+
+        public void SetColors(ICollection<Color> colors)
+        {
+            Application.Current.Dispatcher.Invoke(()=>{
+            ChosenColors.Clear();
+            foreach(var color in colors)
+            {
+                ChosenColors.Add(new ColorViewModel(color));
+            }
+            });
+        }
 
         private BitmapImage _stockImage;
         public BitmapImage StockImage
